@@ -2,12 +2,37 @@ import { defineConfig } from 'vitepress'
 
 const GITHUB_REPO = 'https://github.com/mrsteele/docs.promptodex.com'
 
+const SITE_URL = 'https://docs.promptodex.com'
+
 export default defineConfig({
   title: 'Promptodex Docs',
-  description: 'Documentation for Promptodex — Version Control for AI Prompts',
+  description: 'Documentation for Promptodex — Version Control for AI Prompts. Create, fork, share, and version your AI prompts. Use them from the CLI or in your JavaScript/TypeScript code.',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // Basic SEO
+    ['meta', { name: 'keywords', content: 'promptodex, AI prompts, prompt engineering, prompt registry, pod-cli, prompt version control, prompt templates' }],
+    ['meta', { name: 'author', content: 'Promptodex' }],
+
+    // Open Graph
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'Promptodex Docs' }],
+    ['meta', { property: 'og:description', content: 'Documentation for Promptodex — Version Control for AI Prompts' }],
+    ['meta', { property: 'og:url', content: SITE_URL }],
+    ['meta', { property: 'og:site_name', content: 'Promptodex Docs' }],
+    ['meta', { property: 'og:image', content: `${SITE_URL}/logo.svg` }],
+
+    // Twitter Card
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: 'Promptodex Docs' }],
+    ['meta', { name: 'twitter:description', content: 'Documentation for Promptodex — Version Control for AI Prompts' }],
+
+    // Canonical
+    ['link', { rel: 'canonical', href: SITE_URL }],
   ],
+
+  // Generate sitemap for search engines
+  sitemap: {
+    hostname: SITE_URL,
+  },
 
   markdown: {
     config: (md) => {

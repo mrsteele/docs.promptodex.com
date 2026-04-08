@@ -30,7 +30,7 @@ docs/
   cli/                      # pod-cli: Install, Commands, Passing Variables, Config, Auth, Project Mgmt
   sdk/                      # promptodex npm: Overview, Node.js, TypeScript, Private Prompts
   publishing/               # Creating Prompts, Versioning, Private Prompts
-  registry/                 # Finding Prompts, Namespaces, Trust & Security
+  registry/                 # Finding Prompts, Slugs, Trust & Security
   advanced/                 # Version Pinning, Pipelines, Testing
   api/                      # CLI Commands ref, SDK API ref, Template Syntax ref
   examples/                 # Real-world CLI + code recipes
@@ -49,6 +49,26 @@ VitePress uses Vue under the hood, so `{{` in Markdown is parsed as a Vue templa
 4. **YAML frontmatter** — avoid `{{` entirely in frontmatter values; rephrase instead.
 
 If a build fails with a `vue` error about "Did not expect a type annotation here", it's almost certainly an unescaped `{{` in non-code-block context.
+
+## Important: No Namespace Syntax
+
+Prompt slugs do **not** use namespace prefixes. Use `summarize`, not `mrsteele/summarize`. The only place `mrsteele/` should appear is in GitHub repo URLs.
+
+## SEO & Crawler Optimization
+
+- **Sitemap** auto-generated at `/sitemap.xml` via VitePress `sitemap` config.
+- **robots.txt** at `docs/public/robots.txt` — allows all crawlers.
+- **llms.txt** at `docs/public/llms.txt` — AI crawler summary (emerging standard for GPTBot, Claude, etc.).
+- **Open Graph / Twitter Card** meta tags in `config.mjs` `head` array.
+- **Meta keywords & description** in `config.mjs`.
+- **Canonical URL** set to `https://docs.promptodex.com`.
+- The site URL is defined as `SITE_URL` constant at the top of `config.mjs`.
+
+## Static Assets
+
+- `docs/public/logo.svg` — copied from promptodex.com
+- `docs/public/robots.txt`
+- `docs/public/llms.txt`
 
 ## Adding New Pages
 

@@ -1,0 +1,29 @@
+# Promptodex Docs
+
+> Documentation for Promptodex — Version Control for AI Prompts
+
+Promptodex is a prompt registry where you can create, fork, share, and version AI prompts. It includes a CLI (pod-cli) and a JavaScript/TypeScript SDK (promptodex).
+
+## Key Pages
+
+- [What is Promptodex](https://docs.promptodex.com/introduction/what-is-promptodex): Overview of the platform
+- [Quick Start](https://docs.promptodex.com/quick-start/installation): Get started in under 3 minutes
+- [Writing Prompts](https://docs.promptodex.com/writing-prompts/prompt-structure): Template syntax with variables
+- [CLI Usage](https://docs.promptodex.com/cli/installation): Run prompts from the terminal with pod-cli
+- [SDK Usage](https://docs.promptodex.com/sdk/overview): Load prompts in JavaScript/TypeScript apps
+- [API Reference](https://docs.promptodex.com/api/): CLI commands and SDK API reference
+- [Template Syntax](https://docs.promptodex.com/api/template-syntax): Variable syntax reference
+
+## Core Concepts
+
+- Prompts are text templates stored in the Promptodex registry
+- Variables use double curly brace syntax: {{variableName}}
+- Default values: {{variableName:defaultValue}}
+- Versions are numbered sequentially; use @version to pin (e.g., summarize@2)
+- Prompts can be public (open to everyone) or private (API key required)
+
+## Tools
+
+- **promptodex.com**: Web UI for creating, browsing, forking prompts
+- **pod-cli** (npm: pod-cli): CLI to fetch and run prompts; supports piping, variables, multiple AI vendors
+- **promptodex** (npm: promptodex): JS/TS library that fetches and renders prompts (does NOT run AI models)
