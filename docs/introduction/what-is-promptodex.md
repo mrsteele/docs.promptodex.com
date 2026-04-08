@@ -15,7 +15,7 @@ Most AI prompts live in scattered places — personal notes, Slack messages, sha
 
 Promptodex gives every prompt a permanent home with:
 
-- **A unique slug** — like `mrsteele/summarize` — so prompts are easy to reference
+- **A unique slug** — like `summarize` — so prompts are easy to reference
 - **Version history** — every edit is tracked, so you can compare and roll back
 - **Dynamic variables** — use `{{variableName}}` to make prompts reusable
 - **Forking** — build on any public prompt and make it your own
@@ -48,17 +48,17 @@ Then use it anywhere:
 ::: code-group
 
 ```bash [CLI]
-pod mrsteele/summarize --topic "AI safety" --content "Your article here"
+pod summarize --topic "AI safety" --content "Your article here"
 ```
 
 ```bash [CLI with piping]
-cat article.md | pod mrsteele/summarize --topic "AI safety"
+cat article.md | pod summarize --topic "AI safety"
 ```
 
 ```javascript [Node.js]
 import { pod } from "promptodex";
 
-const prompt = await pod("mrsteele/summarize", {
+const prompt = await pod("summarize", {
   topic: "AI safety",
   content: articleText,
 });

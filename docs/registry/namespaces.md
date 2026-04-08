@@ -1,41 +1,46 @@
-# Namespaces
+# Slugs
 
-Namespaces organize prompts by author, preventing naming conflicts and making attribution clear.
+Every prompt on Promptodex has a unique **slug** — a short, URL-friendly identifier.
 
-## How namespaces work
+## How slugs work
 
-Every user on Promptodex has a namespace (their username). When you create a prompt, it lives under your namespace:
+When you create a prompt, you give it a slug. This is how it's referenced everywhere:
 
 ```
-mrsteele/summarize
-mrsteele/translate
-alice/summarize
+summarize
+translate
+tweet-thread
+code-review
 ```
 
-Two different users can both create a prompt called `summarize` without conflicts.
+Slugs must be unique across the registry.
 
-## Using namespaced slugs
+## Using slugs
 
-Reference a namespaced prompt anywhere:
+Reference a prompt by slug from any tool:
 
 ::: code-group
 
 ```bash [CLI]
-pod mrsteele/summarize
+pod summarize
 ```
 
 ```javascript [SDK]
-await pod("mrsteele/summarize", { content: "..." });
+await pod("summarize", { content: "..." });
 ```
 
 :::
 
-## Short slugs
+## Versioned slugs
 
-In some cases, the namespace can be omitted:
+Append `@version` to pin a specific version:
 
 ```bash
-pod summarize
+pod summarize@2
 ```
 
-The registry resolves this to the appropriate prompt. However, using the full namespaced slug is recommended for clarity and to avoid ambiguity.
+```javascript
+await pod("summarize@2", { content: "..." });
+```
+
+Without a version suffix, the latest version is always returned.

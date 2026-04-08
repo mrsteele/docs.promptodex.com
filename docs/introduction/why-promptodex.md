@@ -24,7 +24,7 @@ Keep your prompts out of your codebase. When a prompt needs updating, change it 
 const prompt = `Summarize the following article about ${topic}: ${content}`;
 
 // ✅ Prompt managed on Promptodex
-const prompt = await pod("mrsteele/summarize", { topic, content });
+const prompt = await pod("summarize", { topic, content });
 ```
 
 ### Collaboration Without Conflicts
@@ -36,7 +36,7 @@ Multiple team members can iterate on prompts without merge conflicts. Fork a pro
 Found a great prompt? Use it immediately from the CLI or your code. No copying, no adapting — just reference it by slug.
 
 ```bash
-pod mrsteele/summarize --content "Your text here"
+pod summarize --content "Your text here"
 ```
 
 ### Model Flexibility

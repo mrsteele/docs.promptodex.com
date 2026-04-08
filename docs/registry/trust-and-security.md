@@ -6,9 +6,9 @@ How Promptodex keeps the registry trustworthy and your data safe.
 
 Public prompts are fully visible — you can read the entire prompt content before using it. There's no hidden logic.
 
-## Namespaces and attribution
+## Attribution
 
-Every prompt is tied to a user namespace (`username/prompt-slug`), so you always know who authored a prompt. Forks maintain attribution to the original.
+Every prompt is tied to its author, so you always know who created it. Forks maintain attribution to the original.
 
 ## Version history
 

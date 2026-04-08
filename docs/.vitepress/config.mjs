@@ -89,7 +89,7 @@ export default defineConfig({
         text: 'Registry',
         items: [
           { text: 'Finding Prompts', link: '/registry/finding-prompts' },
-          { text: 'Namespaces', link: '/registry/namespaces' },
+          { text: 'Slugs', link: '/registry/namespaces' },
           { text: 'Trust & Security', link: '/registry/trust-and-security' },
         ],
       },

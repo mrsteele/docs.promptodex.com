@@ -19,7 +19,7 @@ features:
   - icon: 🚀
     title: Run a prompt in 10 seconds
     details: |
-      npm install -g pod-cli && pod mrsteele/summarize --content "Your article here"
+      npm install -g pod-cli && pod summarize --content "Your article here"
   - icon: 🔀
     title: Fork & Iterate
     details: Fork any public prompt and make it your own. Build on the work of others and share your improvements.

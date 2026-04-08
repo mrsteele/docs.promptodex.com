@@ -8,7 +8,6 @@ Fetch and execute a prompt from the registry.
 
 ```bash
 pod summarize
-pod mrsteele/summarize
 pod summarize@2              # specific version
 ```
 

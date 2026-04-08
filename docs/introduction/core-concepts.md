@@ -6,7 +6,7 @@ Before diving into the tools, it helps to understand the key concepts that make 
 
 A **prompt** is a text template stored on Promptodex. Every prompt has:
 
-- A **slug** — a unique identifier like `summarize` or `mrsteele/tweet-thread`
+- A **slug** — a unique identifier like `summarize` or `tweet-thread`
 - **Content** — the actual prompt text, optionally with variables
 - **Versions** — a history of revisions
 - **Visibility** — public or private
@@ -46,16 +46,17 @@ Every time a prompt is edited, a new version is created. Versions are numbered s
 
 This means you can iterate on prompts without breaking existing users.
 
-## Slugs & Namespaces
+## Slugs
 
-Prompts are identified by slugs. Slugs can include a namespace (typically a username):
+Prompts are identified by **slugs** — unique, URL-friendly names:
 
 ```
-mrsteele/summarize     # namespaced prompt
-summarize              # shorthand (resolved by the registry)
+summarize
+tweet-thread
+translate
 ```
 
-Namespaces prevent naming conflicts and make it clear who authored a prompt.
+Slugs make prompts easy to reference from the CLI, SDK, or the web.
 
 ## Public vs. Private Prompts
 
@@ -64,7 +65,7 @@ Namespaces prevent naming conflicts and make it clear who authored a prompt.
 
 ```bash
 # Public — anyone can run this
-pod mrsteele/summarize
+pod summarize
 
 # Private — requires authentication
 pod my-private-prompt  # needs pod login or API key

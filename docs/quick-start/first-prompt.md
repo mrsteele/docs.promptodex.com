@@ -10,20 +10,12 @@ pod summarize
 
 That's it. The CLI fetches the `summarize` prompt from the registry, sends it to your configured AI model, and prints the response.
 
-## Run a namespaced prompt
-
-Prompts can be namespaced by author:
-
-```bash
-pod mrsteele/summarize
-```
-
 ## Pass content to a prompt
 
 Most prompts accept variables. Pass them as flags:
 
 ```bash
-pod mrsteele/summarize --content "Artificial intelligence is transforming healthcare..."
+pod summarize --content "Artificial intelligence is transforming healthcare..."
 ```
 
 ## See what happened
@@ -31,7 +23,7 @@ pod mrsteele/summarize --content "Artificial intelligence is transforming health
 Add `-v` for verbose output to see the full prompt that was sent:
 
 ```bash
-pod mrsteele/summarize --content "Your text" -v
+pod summarize --content "Your text" -v
 ```
 
 ## Use a specific version

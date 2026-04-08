@@ -41,7 +41,7 @@ pod your-username/your-prompt --task "Explain quantum computing"
 ```javascript
 // From code
 import { pod } from "promptodex";
-const prompt = await pod("your-username/your-prompt", {
+const prompt = await pod("your-prompt", {
   task: "Explain quantum computing",
 });
 ```
@@ -53,7 +53,7 @@ You can also create prompts by forking someone else's public prompt:
 1. Find a prompt you like on [promptodex.com](https://promptodex.com)
 2. Click **Fork**
 3. Modify it to suit your needs
-4. Publish under your namespace
+4. Publish your improved version
 
 Attribution to the original is automatic.
 
