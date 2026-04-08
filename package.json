@@ -1,0 +1,26 @@
+{
+  "name": "docs.promptodex.com",
+  "version": "1.0.0",
+  "description": "Documentation website for promptodex",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrsteele/docs.promptodex.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mrsteele/docs.promptodex.com/issues"
+  },
+  "homepage": "https://github.com/mrsteele/docs.promptodex.com#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
