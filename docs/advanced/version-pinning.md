@@ -38,6 +38,21 @@ pod install summarize@2
 
 After pinning, `pod summarize` in that project always uses version 2, regardless of what's latest in the registry.
 
+## Pin in collections
+
+[Collections](/registry/collections) support per-item pinning. When you add a prompt to a collection, choose whether to pin it:
+
+- **Unpinned** — the collection always resolves to the latest version of that prompt
+- **Pinned** — the collection locks to the exact version you saved
+
+This is useful for curating a stable bundle of prompts that a team or pipeline can install with:
+
+```bash
+pod collection install production-stack
+```
+
+Items pinned in the collection install that version; unpinned items install latest.
+
 ## When to update
 
 - Review new versions on [promptodex.com](https://promptodex.com) before updating

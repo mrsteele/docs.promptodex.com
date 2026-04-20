@@ -32,6 +32,10 @@ Prompts are organized into categories:
 
 Save interesting prompts to your bookmarks for quick access later. Click the bookmark icon on any prompt page.
 
+## Organize with collections
+
+For anything beyond a flat list of bookmarks, use [Collections](/registry/collections) — curated groups of prompts with optional per-item version pinning. Collections can be public (discoverable on your profile) or private.
+
 ## Fork prompts
 
 Found a prompt that's close to what you need? Fork it, make your changes, and publish your own version.

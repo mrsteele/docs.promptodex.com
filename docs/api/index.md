@@ -41,10 +41,50 @@ pod install              # install all from promptodex.json
 
 ## `pod uninstall <slug>`
 
-Remove a prompt from the project.
+Remove a prompt from the project. Also removes any compiled [skill](/cli/skills) artifacts for the prompt.
 
 ```bash
 pod uninstall summarize
+```
+
+## `pod skill install <slug>[@version]`
+
+Install a prompt and compile it into `skills/<slug>.md` with persisted variables.
+
+**Alias:** `pod skill i`
+
+```bash
+pod skill install greet --name Matt
+```
+
+See [Skills](/cli/skills).
+
+## `pod skill rebuild <slug>`
+
+Re-fetch the latest prompt for an installed skill, preserve existing variables, and recompile `skills/<slug>.md`.
+
+```bash
+pod skill rebuild greet
+```
+
+## `pod collection install <slug>`
+
+Install every prompt in a [collection](/registry/collections). Pinned items install that version; unpinned items install latest.
+
+**Alias:** `pod collection i`
+
+```bash
+pod collection install my-code-review
+```
+
+## `pod collection skill install <slug>`
+
+Install every prompt in a collection and compile each as a skill. Variable flags are applied to every prompt.
+
+**Alias:** `pod collection skill i`
+
+```bash
+pod collection skill install my-code-review --author "Matt"
 ```
 
 ## `pod config`
@@ -70,3 +110,13 @@ Run diagnostic checks on config, API keys, registry connectivity, and cache.
 ```bash
 pod doctor
 ```
+
+## `pod doctor skills`
+
+Scan every installed skill and report variable coverage. Exits non-zero when any skill is missing required variables.
+
+```bash
+pod doctor skills
+```
+
+See [Skills → Diagnosing skills](/cli/skills#diagnosing-skills).

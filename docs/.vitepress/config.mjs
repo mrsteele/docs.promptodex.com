@@ -88,6 +88,7 @@ export default defineConfig({
           { text: 'Installation', link: '/cli/installation' },
           { text: 'Commands', link: '/cli/commands' },
           { text: 'Passing Variables', link: '/cli/passing-variables' },
+          { text: 'Skills', link: '/cli/skills' },
           { text: 'Configuration', link: '/cli/configuration' },
           { text: 'Authentication', link: '/cli/authentication' },
           { text: 'Project Management', link: '/cli/project-management' },
@@ -114,6 +115,7 @@ export default defineConfig({
         text: 'Registry',
         items: [
           { text: 'Finding Prompts', link: '/registry/finding-prompts' },
+          { text: 'Collections', link: '/registry/collections' },
           { text: 'Slugs', link: '/registry/namespaces' },
           { text: 'Trust & Security', link: '/registry/trust-and-security' },
         ],
@@ -130,6 +132,7 @@ export default defineConfig({
         text: 'API Reference',
         items: [
           { text: 'CLI Commands', link: '/api/' },
+          { text: 'Public REST API', link: '/api/rest' },
           { text: 'SDK API', link: '/api/sdk' },
           { text: 'Template Syntax', link: '/api/template-syntax' },
         ],

@@ -75,6 +75,22 @@ pod my-private-prompt  # needs pod login or API key
 
 Any public prompt can be **forked** — creating your own copy that you can modify independently. Attribution is automatic, and you can continue to pull in improvements from the original.
 
+## Collections
+
+A **collection** is a curated group of prompts — like a playlist. Each item in a collection can be pinned to a specific version or left unpinned to always track the latest. Collections can be public (discoverable on your profile) or private.
+
+Use them to organize prompts by workflow, share a curated set with a team, or lock a stable bundle for production.
+
+Learn more in [Collections](/registry/collections).
+
+## Skills
+
+A **skill** is a prompt that has been fetched, rendered with your variables, and written to a local file (`skills/<slug>.md`). Skills are version-locked, committable to git, and readable without a network call.
+
+`pod skill install` compiles a single prompt; `pod collection skill install` compiles every prompt in a collection.
+
+Learn more in [Skills](/cli/skills).
+
 ## Model Recommendations
 
 Prompt authors can recommend which AI model works best for their prompt (e.g., GPT-4.1, Claude Sonnet 4). The CLI respects these recommendations by default, but you can always override with `--model`.

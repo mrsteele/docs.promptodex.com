@@ -27,12 +27,12 @@ docs/
   introduction/             # What/Why/Core Concepts
   quick-start/              # Install, First Prompt, Variables, Piping
   writing-prompts/          # Prompt Structure, Variables, Defaults, Best Practices
-  cli/                      # pod-cli: Install, Commands, Passing Variables, Config, Auth, Project Mgmt
+  cli/                      # pod-cli: Install, Commands, Passing Variables, Skills, Config, Auth, Project Mgmt
   sdk/                      # promptodex npm: Overview, Node.js, TypeScript, Private Prompts
   publishing/               # Creating Prompts, Versioning, Private Prompts
-  registry/                 # Finding Prompts, Slugs, Trust & Security
+  registry/                 # Finding Prompts, Collections, Slugs, Trust & Security
   advanced/                 # Version Pinning, Pipelines, Testing
-  api/                      # CLI Commands ref, SDK API ref, Template Syntax ref
+  api/                      # CLI Commands ref, SDK API ref, Public REST API, Template Syntax ref
   examples/                 # Real-world CLI + code recipes
   community/                # Contributing, repos, reporting issues
 ```
